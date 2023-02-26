@@ -19,17 +19,16 @@ span {
   justify-content: right;
   align-items: center;
   padding: 1rem;
-  margin:0.5rem;
+  margin: 0.5rem;
 
   &.result {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
 }
 
 table {
   border-collapse: collapse;
-}
-
+  
 button {
   cursor: pointer;
   background-color: #ddd;
@@ -40,9 +39,9 @@ button {
   font-weight: 500;
   margin: 0.5rem;
 
-  &.angle {
-   &.on {
+  &.angleOn {
     background-color: red;
-   }
   }
+}
+
 }
