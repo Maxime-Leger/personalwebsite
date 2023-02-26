@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 4rem;
+  background-color: white;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menuIcon {
+  display: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.navElements {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  margin: 0 1rem;
+  height: 100%;
+  max-width: 60rem;
+
+  .closeIcon {
+    display: none;
+    margin: 1rem 0 0 1rem;
+    z-index: 1;
+    height: fit-content;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+
+    a {
+      display: inline-block;
+      color: black;
+      font-size: 1.25rem;
+      font-weight: 400;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      padding: 0.5rem 1rem;
+
+      &.active {
+        color: white;
+        font-weight: 500;
+        background-color: #00ccff;
+        border-radius: 0.5rem;
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .navElements {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navElements {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 1045;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: left;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in;
+
+    .closeIcon {
+      display: block;
+    }
+
+    &.active {
+      width: 16rem;
+      padding: 0.5rem 1rem;
+    }
+
+    ul {
+      display: block;
+      margin-left: -1rem;
+      text-align: center;
+
+      li {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .backdrop.active {
+    display: block;
+  }
+}
