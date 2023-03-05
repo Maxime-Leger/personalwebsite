@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .page {
+    display: block;
+    padding: 1rem 0.5rem;
+    overflow-y: scroll;
+  }
+}

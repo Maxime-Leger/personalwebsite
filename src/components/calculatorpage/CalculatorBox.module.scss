@@ -1,0 +1,46 @@
+.container {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 1px 1px 1rem 0 rgba(0, 0, 0, 0.1);
+
+  span {
+    display: flex;
+    background-color: #ddd;
+    // color: red;
+    border-radius: 1rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: default;
+
+    &.result {
+      margin-bottom: 1rem;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+
+    button {
+      cursor: pointer;
+      background-color: #ddd;
+      border-radius: 1rem;
+      height: 3rem;
+      width: 4rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0.5rem;
+
+      &.angleOn {
+        background-color: red;
+      }
+    }
+  }
+}

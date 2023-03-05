@@ -23,7 +23,6 @@
   scrollbar-width: none;
   margin: 0 1rem;
   height: 100%;
-  max-width: 60rem;
 
   .closeIcon {
     display: none;
@@ -54,7 +53,7 @@
       &.active {
         color: white;
         font-weight: 500;
-        background-color: #00ccff;
+        background-color: #b894dc;
         border-radius: 0.5rem;
         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
       }
